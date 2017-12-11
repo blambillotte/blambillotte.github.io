@@ -1,6 +1,5 @@
 (function(){
 
-
   var $nameDiv = document.getElementById('name-box');
 
   // TODO: Detect browser resizes and reset the height
@@ -16,6 +15,7 @@
 
     rotateDiv($nameDiv, percentX, percentY);
     cssShadow($nameDiv, percentX, percentY);
+
   }
 
   function findPercentPosition(totalDist, mousePostion) {
@@ -33,9 +33,7 @@
       x: Math.floor((percentX - 50) * MULTIPLIER),
       y: Math.floor(((percentY - 50) * -1) * MULTIPLIER)
     }
-    console.log(degrees);
     return degrees;
-
   }
 
   function getTransformValue(percentX, percentY) {
@@ -46,7 +44,8 @@
   }
 
   function rotateDiv(div, percentX, percentY) {
-    div.style.transform = getTransformValue(percentX, percentY);
+    var transformValue = getTransformValue(percentX, percentY);
+    div.style.transform = transformValue;
   }
 
 
@@ -58,10 +57,9 @@
 
    var MULTIPLIER = (1/5);
    var px = {
-     x: ((percentX - 50) * -1) * MULTIPLIER,
-     y: ((percentY - 50) * -1) * MULTIPLIER
+     x: Math.floor(((percentX - 50) * -1) * MULTIPLIER),
+     y: Math.floor(((percentY - 50) * -1) * MULTIPLIER)
    }
-   console.log(px);
    return px;
 
  }
@@ -74,7 +72,10 @@
  }
 
  function cssShadow(div, percentX, percentY) {
-   div.style.textShadow = getShadowCss(percentX, percentY, 2);
+   div.style.textShadow = getShadowCss(percentX, percentY, 4);
  }
+
+
+console.log('%cNothing to see here... 🙈','color:blue; font-size: 20px; line-height: 35px');
 
 })();
