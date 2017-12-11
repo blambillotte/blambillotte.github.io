@@ -2,32 +2,37 @@
 body {
   margin: 0;
   text-align: center;
-  background-color: #0c0c0c;
+  /*background-color: ;*/
 }
 
 h1 {
   font-family: 'Audiowide', cursive;
-  color: #257ccd;
+  color: #edf0f3;
   font-size: 3em;
 }
 
 h2 {
   font-family: 'Audiowide', cursive;
-  color: #e6e6e6;
+  color: #257ccd;
   font-size: 2em;
 }
 
 .center-content{
-  margin-top: 30vh;
+  /*margin-top: 10vh;*/
 }
 
 #name-box {
-  height: 350px;
-  width: 350px;
-  border: 1px solid #257ccd;
-  border-radius: 50%;
-  background-color: #00408552;
-  box-shadow: 0px 0px 18px 20px #1b1e21;
+  height: 400px;
+  width: 600px;
+  background-image: url("file:///Users/blambillotte/Documents/Programming/Fonts-Icons-Assets/Assets/6%20Watercolor%20Textures%20Vol2/04.png");
+  background-size: 75%;
+  background-position: center;
+  background-repeat: no-repeat;
+  /*border: 1px solid #257ccd;*/
+  /*border-radius: 50%;*/
+  /*background-color: #00408552;*/
+  /*box-shadow: 0px 0px 16px 1px #34383c;*/
+  transition: .1s ease;
 }
 
 #name-box img {
@@ -73,13 +78,13 @@ h2 {
 
 .nav-items a {
   text-decoration: none;
-  color: #e6e6e6;
+  color: #257ccd;
   display: block;
   transition: .3s background-color;
 }
 
 .nav-items a.active {
-  border-bottom: 1px solid #e6e6e6;
+  border-bottom: 1px solid #257ccd;
 }
 
 .nav-items a:hover {
