@@ -1,3 +1,3 @@
 # Portfolio
 
-A simple scratchpad of ideas
+Trying out some mouse move parallax effects with vanilla javascript.
