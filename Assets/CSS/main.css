@@ -2,7 +2,6 @@
 body {
   margin: 0;
   text-align: center;
-  /*background-color: ;*/
 }
 
 h1 {
@@ -17,9 +16,6 @@ h2 {
   font-size: 2em;
 }
 
-.center-content{
-  /*margin-top: 10vh;*/
-}
 
 #name-box {
   animation: 2.5s ease-in 0s 1 fadein;
@@ -29,10 +25,6 @@ h2 {
   background-size: 75%;
   background-position: center;
   background-repeat: no-repeat;
-  /*border: 1px solid #257ccd;*/
-  /*border-radius: 50%;*/
-  /*background-color: #00408552;*/
-  /*box-shadow: 0px 0px 16px 1px #34383c;*/
   transition: .1s ease;
 }
 
@@ -44,7 +36,6 @@ h2 {
 
 .nav {
   transition: background-color .7s ease-in-out;
-  /*box-shadow: 0px 2px 13px #093c6c;*/ /*Peformance issues when fading*/
   z-index: 10;
   display: flex;
   align-items: flex-end;
