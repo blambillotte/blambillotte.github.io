@@ -1,10 +1,16 @@
 (function(){
 
   var $nameDiv = document.getElementById('name-box');
+  var viewportWidth, viewportHeight;
 
-  // TODO: Detect browser resizes and reset the height
-  var viewportHeight = window.innerHeight;
-  var viewportWidth = window.innerWidth;
+  function getWindowSize() {
+    viewportHeight = window.innerHeight;
+    viewportWidth = window.innerWidth;
+  }
+
+  //Call on Load & on window resize
+  getWindowSize();
+  window.onresize = getWindowSize;
 
   window.addEventListener('mousemove', handleMouseMove);
 
@@ -19,10 +25,8 @@
   }
 
   function findPercentPosition(totalDist, mousePostion) {
-
     var percent = Math.floor((mousePostion / totalDist) * 100);
     return percent;
-
   }
 
   // Full Y rotation:  transform: rotateY(50deg)
@@ -50,7 +54,7 @@
 
 
  /****** Text Shadow *****
-  * Example text-shadow: 1px 1px 2px black;
+   Example text-shadow: 1px 1px 2px black;
  */
 
  function getPxMovement(percentX, percentY) {
@@ -61,13 +65,11 @@
      y: Math.floor(((percentY - 50) * -1) * MULTIPLIER)
    }
    return px;
-
  }
 
  function getShadowCss(percentX, percentY, blurPx) {
-
-   var pixles = getPxMovement(percentX, percentY);
    var COLOR = '#006b5d';
+   var pixles = getPxMovement(percentX, percentY);
    return pixles.x + 'px ' + pixles.y + 'px ' + blurPx + 'px ' + COLOR;
  }
 
@@ -76,6 +78,6 @@
  }
 
 
-console.log('%cNothing to see here... 🙈','color:blue; font-size: 20px; line-height: 35px');
+  console.log('%cNothing to see here... 🙈','color:blue; font-size: 20px; line-height: 35px');
 
 })();
