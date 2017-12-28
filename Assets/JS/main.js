@@ -19,7 +19,8 @@
     var percentX = findPercentPosition(viewportWidth, event.pageX);
     var percentY = findPercentPosition(viewportHeight, event.pageY);
 
-    rotateDiv($nameDiv, percentX, percentY);
+    cancelAnimationFrame(rotateRequest);
+    var rotateRequest = window.requestAnimationFrame(rotateDiv($nameDiv, percentX, percentY));
     cssShadow($nameDiv, percentX, percentY);
 
   }

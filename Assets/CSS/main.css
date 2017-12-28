@@ -2,6 +2,7 @@
 body {
   margin: 0;
   text-align: center;
+  background: linear-gradient(to top left, #0575e6, #021b79);
 }
 
 h1 {
@@ -16,6 +17,9 @@ h2 {
   font-size: 2em;
 }
 
+#main-container {
+  height: calc(100vh - 60px);
+}
 
 #name-box {
   animation: 2.5s ease-in 0s 1 fadein;
@@ -33,6 +37,10 @@ h2 {
 }
 
 /****** Nav Bar ******/
+
+.header {
+  height: 60px;
+}
 
 .nav {
   transition: background-color .7s ease-in-out;
